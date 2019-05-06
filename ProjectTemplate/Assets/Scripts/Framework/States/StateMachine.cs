@@ -6,7 +6,17 @@ namespace LeoDeg.StateActions
 {
     public class StateMachine : MonoBehaviour
     {
-        State currentState;
+        private State currentState;
+
+        public void SetState (State state)
+        {
+            currentState = state;
+        }
+
+        public State GetState ()
+        {
+            return currentState;
+        }
 
         private void OnEnable ()
         {
@@ -36,6 +46,11 @@ namespace LeoDeg.StateActions
         private void Update ()
         {
             currentState.OnUpdate (this);
+        }
+
+        private void LateUpdate ()
+        {
+            currentState.OnLateUpdate (this);
         }
     }
 }

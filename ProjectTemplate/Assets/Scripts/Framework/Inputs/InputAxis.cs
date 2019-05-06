@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace LeoDeg.Inputs
 {
-    [CreateAssetMenu (menuName = "LeoDeg/Inputs/Axis")]
+    [CreateAssetMenu (menuName = "LeoDeg/Inputs/InputAxis")]
     public class InputAxis : Actions.Action
     {
         public string axisName;

@@ -4,15 +4,27 @@ using UnityEngine;
 
 namespace LeoDeg.StateActions
 {
-    [CreateAssetMenu (menuName = "LeoDeg/State")]
+    [CreateAssetMenu (menuName = "LeoDeg/States/State")]
     public class State : ScriptableObject
     {
         public StateAction[] onAwake;
         public StateAction[] onStart;
-        public StateAction[] onFixed;
+        public StateAction[] onFixedUpdate;
+        public StateAction[] onLateUpdate;
         public StateAction[] onUpdate;
-        public StateAction[] onEnter;
-        public StateAction[] onExit;
+        public StateAction[] onEnable;
+        public StateAction[] onDisable;
+
+
+        public void OnEnable (StateMachine stateMachine)
+        {
+            ExecuteActions (stateMachine, onEnable);
+        }
+
+        public void OnDisable (StateMachine stateMachine)
+        {
+            ExecuteActions (stateMachine, onDisable);
+        }
 
         public void OnAwake (StateMachine stateMachine)
         {
@@ -26,7 +38,7 @@ namespace LeoDeg.StateActions
 
         public void OnFixed (StateMachine stateMachine)
         {
-            ExecuteActions (stateMachine, onFixed);
+            ExecuteActions (stateMachine, onFixedUpdate);
         }
 
         public void OnUpdate (StateMachine stateMachine)
@@ -34,18 +46,16 @@ namespace LeoDeg.StateActions
             ExecuteActions (stateMachine, onUpdate);
         }
 
-        public void OnEnable (StateMachine stateMachine)
+        public void OnLateUpdate (StateMachine stateMachine)
         {
-            ExecuteActions (stateMachine, onEnter);
+            ExecuteActions (stateMachine, onLateUpdate);
         }
 
-        public void OnDisable (StateMachine stateMachine)
-        {
-            ExecuteActions (stateMachine, onExit);
-        }
 
         public void ExecuteActions (StateMachine state, StateAction[] actions)
         {
+            if (actions.Equals (null)) return;
+
             for (int i = 0; i < actions.Length; i++)
             {
                 actions[i].Execute (state);
