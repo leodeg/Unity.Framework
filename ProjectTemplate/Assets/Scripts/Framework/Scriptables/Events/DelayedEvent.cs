@@ -20,6 +20,5 @@ namespace LeoDeg.Events
             yield return new WaitForSeconds(t);
             targetEvent.Raise();
         }
-      
     }
 }

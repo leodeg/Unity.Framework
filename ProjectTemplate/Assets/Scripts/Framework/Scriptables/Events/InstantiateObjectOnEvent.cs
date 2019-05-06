@@ -9,8 +9,8 @@ namespace LeoDeg.Events
     /// </summary>
     public class InstantiateObjectOnEvent : GameEventListener
     {
-        public Scriptables.GameObjectScriptable targetGameObject;
-        public Transform targetSpawn;
+        public Scriptables.GameObjectScriptable toInstantiate;
+        public Transform spawnPositionAndRotation;
         
         /// <summary>
         /// Make this true if you only want one instance of the prefab,
@@ -21,17 +21,13 @@ namespace LeoDeg.Events
 
         public override void Response()
         {
-            if (keepOnlyOneInstance)
+            if (keepOnlyOneInstance && previousInstance != null)
             {
-                if (previousInstance)
-                {
-                    Destroy(previousInstance);
-                }
+                Destroy (previousInstance);
             }
 
-            previousInstance = Instantiate(targetGameObject.value, targetSpawn.position, targetSpawn.rotation) as GameObject;
-
-            response.Invoke();
+            previousInstance = Instantiate(toInstantiate.value, spawnPositionAndRotation.position, spawnPositionAndRotation.rotation) as GameObject;
+            this.response.Invoke();
         }
     }
 }

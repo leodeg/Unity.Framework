@@ -8,14 +8,14 @@ namespace LeoDeg.Events
     {
         List<GameEventListener> listeners = new List<GameEventListener>();
 
-        public void Register(GameEventListener l)
+        public void Register(GameEventListener listener)
         {
-            listeners.Add(l);
+            listeners.Add(listener);
         }
 
-        public void UnRegister(GameEventListener l)
+        public void UnRegister(GameEventListener listener)
         {
-            listeners.Remove(l);
+            listeners.Remove(listener);
         }
 
         public void Raise()

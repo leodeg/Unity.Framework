@@ -8,37 +8,37 @@ namespace LeoDeg.Events
         public GameEvent gameEvent;
         public UnityEvent response;
 
+        void OnEnable ()
+        {
+            OnEnableLogic ();
+        }
+
+        void OnDisable ()
+        {
+            OnDisableLogic ();
+        }
+
+        public virtual void Response ()
+        {
+            response.Invoke ();
+        }
+
         /// <summary>
         /// Override this to override the OnEnableLogic()
         /// </summary>
-        public virtual void OnEnableLogic()
+        public virtual void OnEnableLogic ()
         {
             if (gameEvent != null)
-                gameEvent.Register(this);
-        }
-
-        void OnEnable()
-        {
-            OnEnableLogic();
+                gameEvent.Register (this);
         }
 
         /// <summary>
         /// Override this to override the OnDisableLogic()
         /// </summary>
-        public virtual void OnDisableLogic()
+        public virtual void OnDisableLogic ()
         {
             if (gameEvent != null)
-                gameEvent.UnRegister(this);
-        }
-
-        void OnDisable()
-        {
-            OnDisableLogic();
-        }
-
-        public virtual void Response()
-        {
-            response.Invoke();
+                gameEvent.UnRegister (this);
         }
     }
 }
