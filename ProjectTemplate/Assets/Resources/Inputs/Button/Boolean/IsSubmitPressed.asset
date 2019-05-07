@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba66b32bb8e1cf0448b89ff2e03d2fba, type: 3}
-  m_Name: Jump
+  m_Script: {fileID: 11500000, guid: c6a8adf8146ed98479ff4b73a47c2fcc, type: 3}
+  m_Name: IsSubmitPressed
   m_EditorClassIdentifier: 
-  buttonName: Jump
-  isPressed: 0
-  keyState: 0
-  updateVariable: 1
-  scriptableVariable: {fileID: 11400000, guid: e40d0a700d839d74da1b23dbbeb1299f, type: 2}
-  debugValueToConsole: 0
+  value: 0

@@ -14,14 +14,14 @@ namespace LeoDeg.StateActions
         {
             if (condition.CheckCondition (state))
             {
-                if (onTrue != null && state.GetState () != onTrue)
-                    state.SetState (onTrue);
+                if (onTrue != null && state.GetCurrentState () != onTrue)
+                    state.SetCurrentState (onTrue);
                 else Debug.LogWarning ("StateConditionSwitcher::Warning::OnTrue state is not assign!");
             }
             else
             {
-                if (onFalse != null && state.GetState () != onFalse)
-                    state.SetState (onFalse);
+                if (onFalse != null && state.GetCurrentState () != onFalse)
+                    state.SetCurrentState (onFalse);
                 else Debug.LogWarning ("StateConditionSwitcher::Warning::OnTrue state is not assign!");
             }
         }

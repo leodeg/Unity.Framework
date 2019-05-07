@@ -2,7 +2,7 @@
 
 namespace LeoDeg.Actions
 {
-    public class ActionUpdater : MonoBehaviour
+    public class ActionsUpdater : MonoBehaviour
     {
         public Action[] onAwake;
         public Action[] onStart;

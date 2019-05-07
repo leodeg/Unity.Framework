@@ -17,3 +17,4 @@ MonoBehaviour:
   keyState: 0
   updateVariable: 1
   scriptableVariable: {fileID: 11400000, guid: 0499bfceb4dab994586385ea0a7787d5, type: 2}
+  debugValueToConsole: 0

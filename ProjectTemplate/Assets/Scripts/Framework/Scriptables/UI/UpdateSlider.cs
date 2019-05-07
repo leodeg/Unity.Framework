@@ -12,15 +12,15 @@ namespace LeoDeg.UI
         {
             if(targetVariable is FloatScriptable)
             {
-                FloatScriptable f = (FloatScriptable)targetVariable;
-                targetSlider.value = f.value;
+                FloatScriptable floatVariable = (FloatScriptable)targetVariable;
+                targetSlider.value = floatVariable.value;
                 return;
             }
 
             if(targetVariable is IntScriptable)
             {
-                IntScriptable i = (IntScriptable)targetVariable;
-                targetSlider.value = i.value;
+                IntScriptable integerVariable = (IntScriptable)targetVariable;
+                targetSlider.value = integerVariable.value;
             }
         }
     }

@@ -8,24 +8,24 @@ namespace LeoDeg.StateActions
     {
         private State currentState;
 
-        public void SetState (State state)
+        public void SetCurrentState (State state)
         {
             currentState = state;
         }
 
-        public State GetState ()
+        public State GetCurrentState ()
         {
             return currentState;
         }
 
         private void OnEnable ()
         {
-            currentState.OnEnable (this);
+            currentState.OnEnter (this);
         }
 
         private void OnDisable ()
         {
-            currentState.OnDisable (this);
+            currentState.OnExit (this);
         }
 
         private void Awake ()

@@ -17,6 +17,9 @@ namespace LeoDeg.Inputs
         public bool updateVariable = true;
         public Scriptables.BoolScriptable scriptableVariable;
 
+        [Header ("Debug")]
+        public bool debugValueToConsole;
+
         public override void Execute ()
         {
             switch (keyState)
@@ -44,6 +47,11 @@ namespace LeoDeg.Inputs
                 {
                     Debug.LogWarning ("InputButton:Warning: Scriptable variable is not assign");
                 }
+            }
+
+            if (debugValueToConsole)
+            {
+                Debug.Log ("AxisName: [" + buttonName + "], IsPressed: " + isPressed + "]");
             }
         }
     }

@@ -16,12 +16,12 @@ namespace LeoDeg.StateActions
         public StateAction[] onDisable;
 
 
-        public void OnEnable (StateMachine stateMachine)
+        public void OnEnter (StateMachine stateMachine)
         {
             ExecuteActions (stateMachine, onEnable);
         }
 
-        public void OnDisable (StateMachine stateMachine)
+        public void OnExit (StateMachine stateMachine)
         {
             ExecuteActions (stateMachine, onDisable);
         }
