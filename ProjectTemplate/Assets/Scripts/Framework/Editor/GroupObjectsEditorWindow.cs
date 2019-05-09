@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 namespace LeoDeg.Editor
@@ -50,7 +49,7 @@ namespace LeoDeg.Editor
             {
                 if (groupName == "Enter Name")
                 {
-                    EditorUtility.DisplayDialog ("Grouper Message", "You must provide a name for your group!", "OK");
+                    EditorUtility.DisplayDialog ("Group Objects Editor Window", "You must provide a name for your group!", "OK");
                 }
                 else
                 {
@@ -59,7 +58,7 @@ namespace LeoDeg.Editor
                         selectedObject.transform.SetParent (groupObject.transform);
                 }
             }
-            else EditorUtility.DisplayDialog ("Grouper Message", "You must select at least one object on the scene", "OK");
+            else EditorUtility.DisplayDialog ("Group Objects Editor Window", "You must select at least one object on the scene", "OK");
         }
 
         private void CloseWindow ()

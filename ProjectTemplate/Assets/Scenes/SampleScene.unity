@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 838902129}
   - component: {fileID: 838902128}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: Event System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
