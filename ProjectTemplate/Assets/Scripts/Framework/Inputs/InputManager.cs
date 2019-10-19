@@ -5,7 +5,7 @@ using UnityEngine;
 namespace LeoDeg.Framework
 {
     [CreateAssetMenu (menuName = "LeoDeg/Inputs/InputManager")]
-    public class InputManager : Actions.Action
+    public class InputManager : Action
     {
         public override void Execute ()
         {

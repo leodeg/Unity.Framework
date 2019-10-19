@@ -6,7 +6,7 @@ namespace LeoDeg.Framework
     [CreateAssetMenu (menuName = "LeoDeg/States/StateConditionSwitcher")]
     public class StateConditionSwitcher : StateAction
     {
-        public Conditions.Condition condition;
+        public Condition condition;
         public State onTrue;
         public State onFalse;
 

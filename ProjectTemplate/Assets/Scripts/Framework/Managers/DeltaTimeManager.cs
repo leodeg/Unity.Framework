@@ -4,7 +4,7 @@ using System.Collections;
 namespace LeoDeg.Framework
 {
     [CreateAssetMenu (menuName = "LeoDeg/Managers/DeltaTimeManager")]
-    public class DeltaTimeManager : Actions.Action
+    public class DeltaTimeManager : Action
     {
         public Scriptables.FloatScriptable deltaTimeVariable;
         public Scriptables.FloatScriptable fixedDeltaTimeVariable;

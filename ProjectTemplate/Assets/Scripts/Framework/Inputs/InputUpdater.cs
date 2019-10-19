@@ -5,7 +5,7 @@ namespace LeoDeg.Framework
 {
     public class InputUpdater : MonoBehaviour
     {
-        public Actions.Action[] inputs;
+        public Action[] inputs;
 
         private void Update ()
         {

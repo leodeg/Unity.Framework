@@ -6,7 +6,7 @@ namespace LeoDeg.Framework
     [CreateAssetMenu (menuName = "LeoDeg/States/ActionToStateActionAdapter")]
     public class ActionToStateActionAdapter : StateAction
     {
-        public Actions.Action action;
+        public Action action;
 
         public override void Execute (StateMachine state)
         {

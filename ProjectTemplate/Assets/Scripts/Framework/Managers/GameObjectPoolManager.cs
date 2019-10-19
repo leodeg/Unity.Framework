@@ -5,69 +5,90 @@ using UnityEngine;
 
 namespace LeoDeg.Framework
 {
-    [CreateAssetMenu (menuName = "LeoDeg/Managers/GameObjectPoolManager")]
-    public class GameObjectPoolManager : ScriptableObject
-    {
-        /// <summary>
-        /// String - is a name of a pool object, integer - is an id of the pool object.
-        /// </summary>
-        private Dictionary<string, int> objectsPoolDictionary = new Dictionary<string, int> ();
-        public List<ObjectPool> objectPools = new List<ObjectPool> ();
-        private GameObject poolParent;
+	[CreateAssetMenu (menuName = "LeoDeg/Managers/GameObjectPoolManager")]
+	public class GameObjectPoolManager : ScriptableObject
+	{
+		[SerializeField]
+		private List<GameObjectPool> gameObjectPools = new List<GameObjectPool> ();
 
-        public void Initialize ()
-        {
-            if (poolParent != null)
-                Destroy (poolParent);
+		// String - is a prefab name, integer - is an id of the object.
+		private Dictionary<string, int> gameObjectPoolDictionary = new Dictionary<string, int> ();
+		private GameObject poolParent;
 
-            poolParent = new GameObject ();
-            poolParent.name = "GameObjectsPoolManager";
-            objectsPoolDictionary.Clear ();
+		public void Initialize ()
+		{
+			if (poolParent != null)
+				Destroy (poolParent);
 
-            for (int i = 0; i < objectPools.Count; i++)
-            {
-                if (objectPools[i].maxAmount < 1)
-                    objectPools[i].maxAmount = 1;
+			poolParent = new GameObject ();
+			poolParent.name = "GameObjectsPoolManager";
+			gameObjectPoolDictionary.Clear ();
 
-                objectPools[i].currentIndex = 0;
-                objectPools[i].createdObjects.Clear();
+			InitializeGameObjectPoolDictionary ();
+		}
 
-                if (objectsPoolDictionary.ContainsKey(objectPools[i].prefab.name))
-                {
-                    Debug.LogWarning ("GameObjectPoolManager::Warning:: Entry with id [" + objectPools[i].prefab.name + "] is a duplicate.");
-                    continue;
-                }
-                else
-                {
-                    objectsPoolDictionary.Add (objectPools[i].prefab.name, i);
-                }
-            }
-        }
+		private void InitializeGameObjectPoolDictionary ()
+		{
+			for (int currentID = 0; currentID < gameObjectPools.Count; currentID++)
+			{
+				if (gameObjectPools[currentID].maxAmount < 1)
+					gameObjectPools[currentID].maxAmount = 1;
 
-        public GameObject GetPoolObject (string name)
-        {
-            GameObject poolObject = null;
-            int index;
+				gameObjectPools[currentID].currentIndex = 0;
+				gameObjectPools[currentID].createdObjects.Clear ();
 
-            if (objectsPoolDictionary.TryGetValue(name, out index))
-            {
-                ObjectPool currentPool = objectPools[index];
-                if (currentPool.createdObjects.Count - 1 < currentPool.maxAmount)
-                {
-                    poolObject = Instantiate (currentPool.prefab);
-                    poolObject.transform.parent = poolParent.transform;
-                    currentPool.createdObjects.Add (poolObject);
-                }
-                else
-                {
-                    currentPool.currentIndex = (currentPool.currentIndex < currentPool.createdObjects.Count) ? currentPool.currentIndex + 1 : 0;
-                    poolObject = currentPool.GetCreatedObject (currentPool.currentIndex);
-                    poolObject.SetActive (false);
-                    poolObject.SetActive (true);
-                }
-            }
+				if (GameObjectIsValid (currentID))
+					gameObjectPoolDictionary.Add (gameObjectPools[currentID].prefabName, currentID);
+			}
+		}
 
-            return poolObject;
-        }
-    }
+		private bool GameObjectIsValid (int currentObjectID)
+		{
+			if (string.IsNullOrEmpty (gameObjectPools[currentObjectID].prefabName))
+			{
+				Debug.LogWarning ("GameObjectPoolManager::Warning:: Entry with prefab [" + gameObjectPools[currentObjectID].prefab.name + "] has an empty prefab name.");
+				return false;
+			}
+
+			if (gameObjectPoolDictionary.ContainsKey (gameObjectPools[currentObjectID].prefabName))
+			{
+				Debug.LogWarning ("GameObjectPoolManager::Warning:: Entry with id [" + gameObjectPools[currentObjectID].prefabName + "] is a duplicate.");
+				return false;
+			}
+
+			return true;
+		}
+
+		public GameObject GetPoolObject (string name)
+		{
+			int currentPoolID;
+			if (gameObjectPoolDictionary.TryGetValue (name, out currentPoolID))
+			{
+				GameObjectPool currentPool = gameObjectPools[currentPoolID];
+				if (currentPool.createdObjects.Count - 1 < currentPool.maxAmount)
+					currentPool.createdObjects.Add (CreateNewGameObject (currentPool.prefab));
+				return GetGameObjectFromGameObjectPool (currentPool);
+			}
+			else
+			{
+				throw new InvalidOperationException (string.Format ("Pool object with name '{0}' does not exists.", name));
+			}
+		}
+
+		private GameObject CreateNewGameObject (GameObject prefab)
+		{
+			GameObject newGameObject = Instantiate (prefab);
+			newGameObject.transform.parent = poolParent.transform;
+			return newGameObject;
+		}
+
+		private GameObject GetGameObjectFromGameObjectPool (GameObjectPool currentPool)
+		{
+			currentPool.currentIndex = (currentPool.currentIndex < currentPool.createdObjects.Count) ? currentPool.currentIndex + 1 : 0;
+			GameObject poolObject = currentPool.GetGameObject (currentPool.currentIndex);
+			poolObject.SetActive (false);
+			poolObject.SetActive (true);
+			return poolObject;
+		}
+	}
 }

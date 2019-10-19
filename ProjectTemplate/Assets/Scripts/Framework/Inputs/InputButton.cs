@@ -4,7 +4,7 @@ using System.Collections;
 namespace LeoDeg.Framework
 {
     [CreateAssetMenu (menuName = "LeoDeg/Inputs/InputButton")]
-    public class InputButton : Actions.Action
+    public class InputButton : Action
     {
         public enum KeyState { onDown, onCurrent, onUp }
 

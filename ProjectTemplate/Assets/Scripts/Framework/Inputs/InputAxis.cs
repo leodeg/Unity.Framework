@@ -4,7 +4,7 @@ using System.Collections;
 namespace LeoDeg.Framework
 {
     [CreateAssetMenu (menuName = "LeoDeg/Inputs/InputAxis")]
-    public class InputAxis : Actions.Action
+    public class InputAxis : Action
     {
         [Header ("Properties")]
         public string axisName;

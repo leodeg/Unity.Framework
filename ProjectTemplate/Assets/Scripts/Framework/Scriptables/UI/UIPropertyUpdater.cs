@@ -10,7 +10,6 @@ namespace LeoDeg.Framework.UI
         public bool raiseOnEnable;
 
         /// In the off chance you need to update a UI element when disabled, just add the OnDisable() method
-
         /// <summary>
         /// If there's a gameEvent assigned it will automaticall call the Raise() method.
         /// </summary>

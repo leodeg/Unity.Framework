@@ -4,9 +4,9 @@ using System.Collections;
 namespace LeoDeg.Framework
 {
     [CreateAssetMenu (menuName = "LeoDeg/Inputs/InputUpdater")]
-    public class InputScriptableUpdater : Actions.Action
+    public class InputScriptableUpdater : Action
     {
-        public Actions.Action[] inputs;
+        public Action[] inputs;
 
         public override void Execute ()
         {

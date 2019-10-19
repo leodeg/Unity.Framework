@@ -7,6 +7,6 @@ namespace LeoDeg.Framework
     {
         public string description;
 
-        public abstract bool CheckCondition (StateActions.StateMachine state);
+        public abstract bool CheckCondition (StateMachine state);
     }
 }
