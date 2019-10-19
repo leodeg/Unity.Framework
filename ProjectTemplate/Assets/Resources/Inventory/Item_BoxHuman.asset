@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ed22464114971f4493d3ba0c7eb9a83, type: 3}
-  m_Name: Inventory
+  m_Script: {fileID: 11500000, guid: 933a937a7c3c4004080febc154c66a4e, type: 3}
+  m_Name: Item_BoxHuman
   m_EditorClassIdentifier: 
-  inventory:
-    inventory:
-    - item: {fileID: 0}
-      quantity: 0
-      maxQuantity: 0
+  itemName: BoxHuman
+  prefab: {fileID: 100048, guid: 6dbf21470f732f342a7522a106d94e54, type: 3}
+  ItemInformation: {fileID: 11400000, guid: 9a3c19d04926fc748a81bad94f725cff, type: 2}

@@ -6,7 +6,7 @@ namespace LeoDeg.Framework
 {
     public class StateMachine : MonoBehaviour
     {
-        protected State currentState;
+        private State currentState;
 
         public void SetCurrentState (State state)
         {

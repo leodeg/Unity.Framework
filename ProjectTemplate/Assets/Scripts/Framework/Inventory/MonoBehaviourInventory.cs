@@ -4,8 +4,8 @@ using System.Collections;
 namespace LeoDeg.Framework
 {
 	[System.Serializable]
-	public abstract class Item : ScriptableObject
+	public class MonoBehaviourInventory : MonoBehaviour
 	{
-		public string itemName;
+		public Inventory inventory;
 	}
 }

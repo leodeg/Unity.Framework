@@ -1,30 +1,31 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Collections;
-using System;
+using UnityEngine;
 
 namespace LeoDeg.Framework
 {
 	[System.Serializable]
-	[CreateAssetMenu (menuName = "LeoDeg/Inventory/Inventory")]
-	public class Inventory : ScriptableObject
+	public class Inventory
 	{
-		[SerializeField] private ItemInstance[] inventory;
+		[SerializeField] private InventorySlot[] slots;
+
+		public int Capacity { get; private set; }
 
 		public bool SlotEmpty (int index)
 		{
-			if (inventory[index] == null || inventory[index].item == null)
+			if (slots[index] == null || slots[index].item == null)
 				return true;
 			return false;
 		}
 
-		public ItemInstance GetItem (int index)
+		public InventoryItem GetItem (int index)
 		{
 			if (SlotEmpty (index))
 				return null;
-			return inventory[index];
+			return slots[index].item;
 		}
 
-		public bool GetItem (int index, out ItemInstance item)
+		public bool GetItem (int index, out InventoryItem item)
 		{
 			if (SlotEmpty (index))
 			{
@@ -32,28 +33,28 @@ namespace LeoDeg.Framework
 				return false;
 			}
 
-			item = inventory[index];
+			item = slots[index].item;
 			return true;
 		}
 
-		public ItemInstance GetItem (string itemName)
+		public InventoryItem GetItem (string itemName)
 		{
-			for (int i = 0; i < inventory.Length; i++)
+			for (int i = 0; i < slots.Length; i++)
 			{
-				if (inventory[i].item.name == itemName)
-					return inventory[i];
+				if (slots[i].item.itemName == itemName)
+					return slots[i].item;
 			}
 
 			return null;
 		}
 
-		public bool GetItem (string itemName, out ItemInstance item)
+		public bool GetItem (string itemName, out InventoryItem item)
 		{
-			for (int i = 0; i < inventory.Length; i++)
+			for (int i = 0; i < slots.Length; i++)
 			{
-				if (inventory[i].item.name == itemName)
+				if (slots[i].item.itemName == itemName)
 				{
-					item = inventory[i];
+					item = slots[i].item;
 					return true;
 				}
 			}
@@ -62,13 +63,14 @@ namespace LeoDeg.Framework
 			return false;
 		}
 
-		public int InsertItem (ItemInstance item)
+		public int InsertItem (InventoryItem item)
 		{
-			for (int slotIndex = 0; slotIndex < inventory.Length; slotIndex++)
+			for (int slotIndex = 0; slotIndex < slots.Length; slotIndex++)
 			{
 				if (SlotEmpty (slotIndex))
 				{
-					inventory[slotIndex] = item;
+					slots[slotIndex].item = item;
+					++Capacity;
 					return slotIndex;
 				}
 			}
@@ -80,13 +82,13 @@ namespace LeoDeg.Framework
 			if (SlotEmpty (index))
 				return false;
 
-			inventory[index] = null;
+			slots[index] = null;
+			--Capacity;
 			return true;
 		}
 
 		public void SaveInventory ()
 		{
-
 			throw new NotImplementedException ();
 		}
 	}
