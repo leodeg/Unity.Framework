@@ -3,7 +3,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace LeoDeg.Events
+namespace LeoDeg.Framework.Events
 {
     [CustomEditor(typeof(GameEvent))]
     public class EventEditor : Editor

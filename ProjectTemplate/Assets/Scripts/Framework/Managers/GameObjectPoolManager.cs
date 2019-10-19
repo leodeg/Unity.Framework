@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LeoDeg.Managers
+namespace LeoDeg.Framework
 {
     [CreateAssetMenu (menuName = "LeoDeg/Managers/GameObjectPoolManager")]
     public class GameObjectPoolManager : ScriptableObject

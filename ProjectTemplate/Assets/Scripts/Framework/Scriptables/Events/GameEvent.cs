@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace LeoDeg.Events
+namespace LeoDeg.Framework.Events
 {
     [CreateAssetMenu(menuName = "LeoDeg/Events/GameEvent")]
     public class GameEvent : ScriptableObject

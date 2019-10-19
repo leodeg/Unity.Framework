@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace LeoDeg.StateActions
+namespace LeoDeg.Framework
 {
     [CreateAssetMenu (menuName = "LeoDeg/States/ActionToStateActionAdapter")]
     public class ActionToStateActionAdapter : StateAction

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LeoDeg.Scriptables
+namespace LeoDeg.Framework.Scriptables
 {
     [CreateAssetMenu(menuName = "LeoDeg/Variables/BoolScriptable")]
     public class BoolScriptable : ScriptableObject

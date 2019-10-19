@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LeoDeg.Managers
+namespace LeoDeg.Framework
 {
     /// <summary>
     /// Handler of a game objects

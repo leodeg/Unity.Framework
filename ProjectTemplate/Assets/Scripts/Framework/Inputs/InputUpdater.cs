@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace LeoDeg.Inputs
+namespace LeoDeg.Framework
 {
     public class InputUpdater : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace LeoDeg.Assign
+namespace LeoDeg.Framework
 {
     public class AssignGameObject : MonoBehaviour
     {

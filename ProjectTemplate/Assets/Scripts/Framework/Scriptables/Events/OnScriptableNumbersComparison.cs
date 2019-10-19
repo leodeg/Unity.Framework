@@ -1,8 +1,8 @@
-﻿using LeoDeg.Scriptables;
+﻿using LeoDeg.Framework.Scriptables;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace LeoDeg.Events
+namespace LeoDeg.Framework.Events
 {
     public class OnScriptableNumbersComparison : EventExecutionOnMonoBehaviour
     {

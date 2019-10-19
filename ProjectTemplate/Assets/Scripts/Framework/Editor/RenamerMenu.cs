@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace LeoDeg.Editor
+namespace LeoDeg.Framework.Editor
 {
     public class RenamerMenu : MonoBehaviour
     {

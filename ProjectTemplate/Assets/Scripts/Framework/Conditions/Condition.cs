@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace LeoDeg.Conditions
+namespace LeoDeg.Framework
 {
     public abstract class Condition : ScriptableObject
     {

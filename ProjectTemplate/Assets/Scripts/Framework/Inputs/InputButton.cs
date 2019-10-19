@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace LeoDeg.Inputs
+namespace LeoDeg.Framework
 {
     [CreateAssetMenu (menuName = "LeoDeg/Inputs/InputButton")]
     public class InputButton : Actions.Action

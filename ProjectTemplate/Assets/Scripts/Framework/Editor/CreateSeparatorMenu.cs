@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-namespace LeoDeg.Editor
+namespace LeoDeg.Framework.Editor
 {
     public class CreateSeparatorMenu : MonoBehaviour
     {

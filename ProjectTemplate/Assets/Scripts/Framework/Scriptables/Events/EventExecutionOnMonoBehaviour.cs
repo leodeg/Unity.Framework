@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LeoDeg.Events
+namespace LeoDeg.Framework.Events
 {
     public class EventExecutionOnMonoBehaviour : MonoBehaviour
     {

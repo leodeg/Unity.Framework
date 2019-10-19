@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LeoDeg.Events
+namespace LeoDeg.Framework.Events
 {
     /// <summary>
     /// This script works as a game event listener (since it derives from it)

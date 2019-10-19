@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace LeoDeg.Actions
+namespace LeoDeg.Framework
 {
     [CreateAssetMenu (menuName = "LeoDeg/Actions/ActionBooleanSwitcher")]
     public class ActionBooleanSwitcher : Action

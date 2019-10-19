@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace LeoDeg.StateActions
+namespace LeoDeg.Framework
 {
     [CreateAssetMenu (menuName = "LeoDeg/States/StateConditionSwitcher")]
     public class StateConditionSwitcher : StateAction

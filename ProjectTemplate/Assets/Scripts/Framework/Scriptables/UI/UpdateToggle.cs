@@ -1,6 +1,6 @@
 ﻿using UnityEngine.UI;
 
-namespace LeoDeg.UI
+namespace LeoDeg.Framework.UI
 {
     public class UpdateToggle : UIPropertyUpdater
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace LeoDeg.Managers
+namespace LeoDeg.Framework
 {
     public static class GameManagers
     {

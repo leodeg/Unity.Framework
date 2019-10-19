@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LeoDeg.Actions
+namespace LeoDeg.Framework
 {
     public class ActionsUpdater : MonoBehaviour
     {

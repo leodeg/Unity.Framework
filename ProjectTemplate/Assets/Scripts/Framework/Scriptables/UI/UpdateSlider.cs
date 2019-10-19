@@ -1,7 +1,7 @@
 ﻿using UnityEngine.UI;
-using LeoDeg.Scriptables;
+using LeoDeg.Framework.Scriptables;
 
-namespace LeoDeg.UI
+namespace LeoDeg.Framework.UI
 {
     public class UpdateSlider : UIPropertyUpdater
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LeoDeg.StateActions
+namespace LeoDeg.Framework
 {
     [CreateAssetMenu (menuName = "LeoDeg/States/State")]
     public class State : ScriptableObject

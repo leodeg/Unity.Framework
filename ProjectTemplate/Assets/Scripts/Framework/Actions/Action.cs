@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LeoDeg.Actions
+namespace LeoDeg.Framework
 {
     public abstract class Action : ScriptableObject
     {

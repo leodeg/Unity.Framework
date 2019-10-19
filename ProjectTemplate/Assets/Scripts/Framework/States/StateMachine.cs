@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LeoDeg.StateActions
+namespace LeoDeg.Framework
 {
     public class StateMachine : MonoBehaviour
     {
-        private State currentState;
+        protected State currentState;
 
         public void SetCurrentState (State state)
         {
@@ -18,12 +18,12 @@ namespace LeoDeg.StateActions
             return currentState;
         }
 
-        private void OnEnable ()
+        private void Enter ()
         {
             currentState.OnEnter (this);
         }
 
-        private void OnDisable ()
+        private void Exit ()
         {
             currentState.OnExit (this);
         }

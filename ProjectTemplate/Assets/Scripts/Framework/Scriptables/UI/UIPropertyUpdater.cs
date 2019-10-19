@@ -1,6 +1,6 @@
-﻿using LeoDeg.Events;
+﻿using LeoDeg.Framework.Events;
 
-namespace LeoDeg.UI
+namespace LeoDeg.Framework.UI
 {
     public class UIPropertyUpdater : GameEventListener
     {

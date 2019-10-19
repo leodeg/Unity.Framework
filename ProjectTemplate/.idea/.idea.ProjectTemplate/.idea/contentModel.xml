@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Computer\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Computer\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_ProjectTemplate.-377044839.00" t="ExcludeRecursive" />
+    <e p="E:\CODE\REPOS\Unity.ProjectTemplate\ProjectTemplate" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Framework" t="Include">
+            <e p="Actions" t="Include">
+              <e p="Action.cs" t="Include" />
+              <e p="ActionBooleanSwitcher.cs" t="Include" />
+              <e p="ActionsUpdater.cs" t="Include" />
+            </e>
+            <e p="Assign" t="Include">
+              <e p="AssignGameObject.cs" t="Include" />
+              <e p="AssignTransform.cs" t="Include" />
+            </e>
+            <e p="Conditions" t="Include">
+              <e p="Condition.cs" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="CreateSeparatorMenu.cs" t="Include" />
+              <e p="GroupObjectsEditorWindow.cs" t="Include" />
+              <e p="GroupObjectsMenu.cs" t="Include" />
+              <e p="RenamerEditorWindow.cs" t="Include" />
+              <e p="RenamerMenu.cs" t="Include" />
+            </e>
+            <e p="Inputs" t="Include">
+              <e p="InputAxis.cs" t="Include" />
+              <e p="InputButton.cs" t="Include" />
+              <e p="InputManager.cs" t="Include" />
+              <e p="InputScriptableUpdater.cs" t="Include" />
+              <e p="InputUpdater.cs" t="Include" />
+            </e>
+            <e p="Managers" t="Include">
+              <e p="DeltaTimeManager.cs" t="Include" />
+              <e p="GameManagers.cs" t="Include" />
+              <e p="GameObjectPoolManager.cs" t="Include" />
+              <e p="ObjectPool.cs" t="Include" />
+            </e>
+            <e p="Scriptables" t="Include">
+              <e p="Custom UI" t="Include">
+                <e p="EventEditor.cs" t="Include" />
+              </e>
+              <e p="Events" t="Include">
+                <e p="ConditionalEventOnBoolVariable.cs" t="Include" />
+                <e p="ConditionalEventOnGameObjectState.cs" t="Include" />
+                <e p="DelayedEvent.cs" t="Include" />
+                <e p="EventExecutionOnMonoBehaviour.cs" t="Include" />
+                <e p="GameEvent.cs" t="Include" />
+                <e p="GameEventListener.cs" t="Include" />
+                <e p="InstantiateObjectOnEvent.cs" t="Include" />
+                <e p="OnEnableExecuteEvent.cs" t="Include" />
+                <e p="OnFloatComparisonEvent.cs" t="Include" />
+                <e p="OnIntegerComparisonEvent.cs" t="Include" />
+                <e p="OnNumberComparison.cs" t="Include" />
+                <e p="OnScriptableNumbersComparison.cs" t="Include" />
+              </e>
+              <e p="UI" t="Include">
+                <e p="UIPropertyUpdater.cs" t="Include" />
+                <e p="UpdateButtonInteractability.cs" t="Include" />
+                <e p="UpdateImage.cs" t="Include" />
+                <e p="UpdateSlider.cs" t="Include" />
+                <e p="UpdateText.cs" t="Include" />
+                <e p="UpdateToggle.cs" t="Include" />
+              </e>
+              <e p="Variables" t="Include">
+                <e p="BoolScriptable.cs" t="Include" />
+                <e p="FloatScriptable.cs" t="Include" />
+                <e p="GameObjectScriptable.cs" t="Include" />
+                <e p="IntScriptable.cs" t="Include" />
+                <e p="NumberScriptable.cs" t="Include" />
+                <e p="SpriteScriptable.cs" t="Include" />
+                <e p="StateScriptable.cs" t="Include" />
+                <e p="StringScriptable.cs" t="Include" />
+                <e p="TransformArrayScriptable.cs" t="Include" />
+                <e p="TransformScriptable.cs" t="Include" />
+                <e p="Vector3Scriptable.cs" t="Include" />
+              </e>
+            </e>
+            <e p="States" t="Include">
+              <e p="ActionToStateActionAdapter.cs" t="Include" />
+              <e p="State.cs" t="Include" />
+              <e p="StateAction.cs" t="Include" />
+              <e p="StateActionBooleanSwitcher.cs" t="Include" />
+              <e p="StateBooleanSwitcher.cs" t="Include" />
+              <e p="StateConditionSwitcher.cs" t="Include" />
+              <e p="StateMachine.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="ProjectTemplate.sln" t="IncludeFlat" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

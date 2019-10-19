@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace LeoDeg.Events
+namespace LeoDeg.Framework.Events
 {
     public class ConditionalEventOnBoolVariable : EventExecutionOnMonoBehaviour
     {

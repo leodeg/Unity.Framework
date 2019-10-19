@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LeoDeg.Scriptables
+namespace LeoDeg.Framework.Scriptables
 {
     /// <summary>
     /// Similar to transform variables but this one is for keeping references to gameObjects or 

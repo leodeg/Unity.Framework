@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LeoDeg.StateActions
+namespace LeoDeg.Framework
 {
     public abstract class StateAction : ScriptableObject
     {
