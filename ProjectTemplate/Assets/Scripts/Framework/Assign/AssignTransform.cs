@@ -3,14 +3,16 @@ using System.Collections;
 
 namespace LeoDeg.Framework
 {
-    public class AssignTransform : MonoBehaviour
-    {
-        Scriptables.TransformScriptable scriptableVariable;
+	public class AssignTransform : MonoBehaviour
+	{
+		[SerializeField]
+		private Scriptables.TransformScriptable scriptableVariable;
 
-        private void OnEnable ()
-        {
-            scriptableVariable.value = this.transform;
-            Destroy (this);
-        }
-    }
+		private void OnEnable ()
+		{
+			if (scriptableVariable != null)
+				scriptableVariable.value = this.transform;
+			Destroy (this);
+		}
+	}
 }

@@ -6,7 +6,7 @@ namespace LeoDeg.Framework.Events
     [CreateAssetMenu(menuName = "LeoDeg/Events/GameEvent")]
     public class GameEvent : ScriptableObject
     {
-        List<GameEventListener> listeners = new List<GameEventListener>();
+        private readonly List<GameEventListener> listeners = new List<GameEventListener>();
 
         public void Register(GameEventListener listener)
         {

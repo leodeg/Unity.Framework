@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a31444053fb8ba040869b020c12d39b2, type: 3}
-  m_Name: GameObjectPoolManager
+  m_Script: {fileID: 11500000, guid: 58262f094aa41a840bdb241a750e0b46, type: 3}
+  m_Name: FixedDeltaTime
   m_EditorClassIdentifier: 
-  gameObjectPools: []
+  value: 0
